@@ -30,6 +30,13 @@ public class Explorepage extends Base {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     WebElement pagetovisit = driver.findElement(By.xpath("//a[text()='Places To Visit']"));
     pagetovisit.click();
+	}
+		@Test (priority=4)
+	public void  readmore() {
+		driver.navigate().to("https://hashirakb.github.io/Kerala-Tourism-Website/thrissur.html");
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+    WebElement readmorelink = driver.findElement(By.xpath("//a[@href='thrissur.html']"));
+    readmorelink.click();
     
 }
 }
